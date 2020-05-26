@@ -96,18 +96,18 @@ public class GUI implements Runnable {
         frame.setResizable(true);
         //frame.setSize(500, 530);
         frame.setMinimumSize(new Dimension(1100, 480));
-        appendBtn  = new JButton("Add");
-        removeBtn = new JButton("Delete");
-        quickBtn = new JButton("Quick Sort");
+        appendBtn  = new JButton("Добавить");
+        removeBtn = new JButton("Удалить");
+        quickBtn = new JButton("Быстрая сортировка");
 
-        shellBtn = new JButton("Shell Sort");
-        interBtn = new JButton("Intro Sort");
+        shellBtn = new JButton("Сортировка Шелла");
+        interBtn = new JButton("Интроспективная сортировка");
         key = new JTextField("",6);
         key.setMaximumSize(new Dimension(400, 20));
         value = new JTextField("", 6);
         value.setMaximumSize(new Dimension(400, 20));
-        text_value = new JLabel("Value");
-        text_key = new JLabel("Key");
+        text_value = new JLabel("Значение");
+        text_key = new JLabel("Ключ");
         model = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int r, int c){
@@ -115,8 +115,8 @@ public class GUI implements Runnable {
             }
         };
         table = new JTable(model);
-        model.addColumn("Key");
-        model.addColumn("Value");
+        model.addColumn("Ключ");
+        model.addColumn("Значение");
         hash = new HashWork();
         table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
     }
